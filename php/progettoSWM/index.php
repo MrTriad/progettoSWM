@@ -48,7 +48,10 @@
         <div class="col-sm-4">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Basic log in vulnerability</h5>
+            <span class="badge badge-primary">Pill Badge</span>
+              <span class="badge badge-primary">Pill Badge</span>
+              <h4 class="card-title" style="margin-top: 10px;">Basic log in vulnerability</h4>
+              
               <p class="card-text">Try to log in with the oldest trick in the book</p>
               <a href="/SQLi/SQLi1.php" class="btn btn-primary">SQLi1</a>
             </div>
@@ -66,8 +69,8 @@
         <div class="col-sm-4">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">UNION SQLi</h5>
-              <p class="card-text">Some bad guys sells malwares on the web, try to get their log in credential as payback</p>
+              <h5 class="card-title">BLIND SQLi</h5>
+              <p class="card-text">The bad guys really didn't appreciated the last attack. They're back, but their database should be afraid of snakes.</p>
               <a href="/SQLi/SQLi3.php" class="btn btn-primary">SQLi3</a>
             </div>
           </div>
@@ -91,6 +94,19 @@
               <h5 class="card-title">Basic stored XSS</h5>
               <p class="card-text">Try to make your damage permanent</p>
               <a href="/XSS/XSS2/XSS2_Log.php" class="btn btn-primary">XSS2</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 style="margin-top:20px">SSRF</h2>
+      <div class="row" style="margin-top:10px">
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Basic SSRF</h5>
+              <p class="card-text">Create a malicious link and steal some juicy data</p>
+              <a href="/SSRF/SSRF1/SSRF1.php" class="btn btn-primary">SSRF1</a>
             </div>
           </div>
         </div>
