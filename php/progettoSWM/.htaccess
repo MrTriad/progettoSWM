@@ -1,0 +1,4 @@
+<Files /var/www/DangerousDirectory/SafeFile.html>
+   Order Deny,Allow
+   Allow from all
+</Files>
