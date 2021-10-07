@@ -1,7 +1,7 @@
 # progettoSWM
 
-##start
+## start
 docker-compose up
 
-##stop
+## stop
 docker-compose down
