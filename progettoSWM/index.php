@@ -50,7 +50,7 @@
             <div class="card-body">
               <h5 class="card-title">Basic log in vulnerability</h5>
               <p class="card-text">Try to log in with the oldest trick in the book</p>
-              <a href="./SQLi/SQLi1.php" class="btn btn-primary">SQLi1</a>
+              <a href="/SQLi/SQLi1.php" class="btn btn-primary">SQLi1</a>
             </div>
           </div>
         </div>
@@ -59,7 +59,7 @@
             <div class="card-body">
               <h5 class="card-title">UNION SQLi</h5>
               <p class="card-text">Some bad guys sells malwares on the web, try to get their log in credential as payback</p>
-              <a href="./SQLi/SQLi2.php" class="btn btn-primary">SQLi2</a>
+              <a href="/SQLi/SQLi2.php" class="btn btn-primary">SQLi2</a>
             </div>
           </div>
         </div>
@@ -68,7 +68,7 @@
             <div class="card-body">
               <h5 class="card-title">UNION SQLi</h5>
               <p class="card-text">Some bad guys sells malwares on the web, try to get their log in credential as payback</p>
-              <a href="./SQLi/SQLi3.php" class="btn btn-primary">SQLi3</a>
+              <a href="/SQLi/SQLi3.php" class="btn btn-primary">SQLi3</a>
             </div>
           </div>
         </div>
@@ -81,7 +81,7 @@
             <div class="card-body">
               <h5 class="card-title">Basic reflected XSS</h5>
               <p class="card-text">Create a malicious link and steal some juicy data</p>
-              <a href="/progettoSWM/XSS/XSS1.php" class="btn btn-primary">XSS1</a>
+              <a href="/XSS/XSS1.php" class="btn btn-primary">XSS1</a>
             </div>
           </div>
         </div>
@@ -90,7 +90,7 @@
             <div class="card-body">
               <h5 class="card-title">Basic stored XSS</h5>
               <p class="card-text">Try to make your damage permanent</p>
-              <a href="/progettoSWM/XSS/XSS2/XSS2_Log.php" class="btn btn-primary">XSS2</a>
+              <a href="/XSS/XSS2/XSS2_Log.php" class="btn btn-primary">XSS2</a>
             </div>
           </div>
         </div>

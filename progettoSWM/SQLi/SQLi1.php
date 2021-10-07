@@ -66,7 +66,7 @@ if(!empty($_GET["username"]) && !empty($_GET["password"]) && isset($_GET["secure
       <p class="lead">Now you can reset and retry the page or return to the home ^^</p>
     </div>
     <div class="col-sm-1">
-      <form action="/progettoSWM/SQLi/SQLi1.php" method="get">
+      <form action="/SQLi/SQLi1.php" method="get">
         <input type="hidden" name="reset" value=\'1\'>
         <div class="d-flex justify-content-center">
           <button type="submit" class="btn btn-primary">Reset</button>
@@ -108,7 +108,7 @@ if(!empty($_GET["username"]) && !empty($_GET["password"]) && isset($_GET["secure
   <div class="row">
     <div class="col-sm-6">
       <h2>Login form non sanitizzato</h2>
-      <form action="/progettoSWM/SQLi/SQLi1.php" method="get">
+      <form action="/SQLi/SQLi1.php" method="get">
         <div class="form-group">
           <label for="Usarname">Username:</label>
           <input type="username" class="form-control" id="username" placeholder="Enter username" name="username">
@@ -125,7 +125,7 @@ if(!empty($_GET["username"]) && !empty($_GET["password"]) && isset($_GET["secure
     </div>
     <div class="col-sm-6">
         <h2>Login form sanitizzato</h2>
-        <form action="/progettoSWM/SQLi/SQLi1.php" method="get">
+        <form action="/SQLi/SQLi1.php" method="get">
           <div class="form-group">
             <label for="Usarname">Username:</label>
             <input type="username" class="form-control" id="username" placeholder="Enter username" name="username">
