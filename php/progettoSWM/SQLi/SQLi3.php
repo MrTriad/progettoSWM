@@ -77,13 +77,13 @@ require('../backend/dbConnector.php');
 
             if($result->num_rows>=1){
               echo('
-              <div class="alert alert-success" role="alert">
+              <div class="alert alert-success" role="alert" style="margin-top:10px;">
                 <strong>We got you covered!</strong> The item is still available.
               </div>
               ');
             }else{
               echo('
-              <div class="alert alert-danger" role="alert">
+              <div class="alert alert-danger" role="alert" style="margin-top:10px;">
                 <strong>We\'re sorry.</strong> The item is no more available in our store.
               </div>
               ');
