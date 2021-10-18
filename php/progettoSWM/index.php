@@ -59,7 +59,7 @@
 						<div class="col-sm-4 d-flex align-items-stretch">
 							<div class="card">
 								<div class="card-header">
-									<span class="badge badge-primary">Union SQL</span>
+									<span class="badge badge-primary">Union SQLi</span>
 									<span class="badge badge-primary">Malwares</span>
 									<span class="badge badge-primary">SQL tables</span>
 								</div>

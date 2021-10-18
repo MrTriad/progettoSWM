@@ -1,10 +1,8 @@
 import requests
 import string
 
-# Place here your values
 url        = 'http://172.16.238.10/SQLi/SQLi3.php'
 
-# Accumulator 
 out = ''
 
 for i in range(0, 40):
