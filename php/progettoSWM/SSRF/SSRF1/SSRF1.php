@@ -26,7 +26,7 @@ function curl_get($url){
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <title>XSS 1</title>
+  <title>SSRF 1</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../../css/bootstrap4-neon-glow.min.css">
