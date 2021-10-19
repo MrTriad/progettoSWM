@@ -31,7 +31,7 @@ require('../backend/dbConnector.php');
         <p class="lead">Some bad guys sells malwares on the web, try to get their log in credential as payback</p>
       </div>
       <div class="col-sm-1">
-        <form action="/progettoSWM/index.php" method="get">
+        <form action="/index.php" method="get">
           <div class="d-flex justify-content-center">
             <button type="submit" class="btn btn-primary">Home</button>
           </div>
@@ -47,7 +47,7 @@ require('../backend/dbConnector.php');
             <div class="col-sm-12 ">
                 <p class="lead">Steal everything from anyone, but please don't attack us</p>
                 
-                <form action="/progettoSWM/SQLi/SQLi2.php" method="get">
+                <form action="/SQLi/SQLi2.php" method="get">
 								
                     <div class="form-group">
                         <label for="name">Item name:</label>

@@ -1,0 +1,41 @@
+version: '3.8'
+services:
+    php-apache-environment:
+        container_name: php-apache
+        build:
+            context: ./php
+            dockerfile: Dockerfile
+        depends_on:
+            - db
+        volumes:
+            - ./php/progettoSWM:/var/www/html/
+        ports:
+            - 8000:80
+        networks:
+            app_net:
+                ipv4_address: 172.16.238.10
+    db:
+        container_name: db
+        image: mysql
+        restart: always
+        volumes:
+            - ./mysql-dump:/docker-entrypoint-initdb.d
+        environment:
+            MYSQL_ROOT_PASSWORD: ciscocisco
+            MYSQL_DATABASE: trainingSWM
+            MYSQL_USER: triad
+            MYSQL_PASSWORD: Database!8
+        networks:
+            app_net:
+                ipv4_address: 172.16.238.11
+        ports:
+            - "9906:3306"
+
+networks:
+  app_net:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.16.238.0/24
+          gateway: 172.16.238.1

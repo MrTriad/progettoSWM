@@ -19,18 +19,18 @@ if(isset($_SESSION["XSS2_username"])){
     $stmt->bind_param("ss", $_SESSION["XSS2_username"], $post);
     $stmt-> execute();
     $db -> close();
-    header("location: /progettoSWM/XSS/XSS2/XSS2_Blog.php");
+    header("location: /XSS/XSS2/XSS2_Blog.php");
   }else if(isset($_GET['reset'])){
     unset($_SESSION["XSS2_username"]);
     $query = "DELETE FROM XSS2_Post WHERE Username = 'Alice' OR Username = 'Eve';";
     $db->query($query);
-    header("location: /progettoSWM/XSS/XSS2/XSS2_Log.php");
+    header("location: /XSS/XSS2/XSS2_Log.php");
   }
   
   
 }else{
     
-  header("location: /progettoSWM/XSS/XSS2/XSS2_Log.php");
+  header("location: /XSS/XSS2/XSS2_Log.php");
 }
 
 ?>
@@ -42,7 +42,7 @@ if(isset($_SESSION["XSS2_username"])){
   <title>XSS 2</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/progettoSWM/css/bootstrap4-neon-glow.min.css">
+  <link rel="stylesheet" href="/css/bootstrap4-neon-glow.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -58,7 +58,7 @@ if(isset($_SESSION["XSS2_username"])){
       <p class="lead">We removed all the SQLi from here, so there\'s absolutely no danger</p>
     </div>
     <div class="col-sm-1">
-      <form action="/progettoSWM/XSS/XSS2/XSS2_Blog.php" method="get">
+      <form action="/XSS/XSS2/XSS2_Blog.php" method="get">
         <input type="hidden" name="reset" value=\'1\'>
         <div class="d-flex justify-content-center">
           <button type="submit" class="btn btn-primary">Reset</button>
@@ -66,7 +66,7 @@ if(isset($_SESSION["XSS2_username"])){
       </form>
     </div>
     <div class="col-sm-1">
-      <form action="/progettoSWM/index.php" method="get">
+      <form action="/index.php" method="get">
         <div class="d-flex justify-content-center">
           <button type="submit" class="btn btn-primary">Home</button>
         </div>
@@ -82,7 +82,7 @@ if(isset($_SESSION["XSS2_username"])){
       <p class="lead">Write a payload and make sure that the problem will persist >:3</p>
     </div>
     <div class="col-sm-1">
-      <form action="/progettoSWM/XSS/XSS2/XSS2_Blog.php" method="get">
+      <form action="/XSS/XSS2/XSS2_Blog.php" method="get">
         <input type="hidden" name="reset" value=\'1\'>
         <div class="d-flex justify-content-center">
           <button type="submit" class="btn btn-primary">Reset</button>
@@ -90,7 +90,7 @@ if(isset($_SESSION["XSS2_username"])){
       </form>
     </div>
     <div class="col-sm-1">
-      <form action="/progettoSWM/index.php" method="get">
+      <form action="/index.php" method="get">
         <div class="d-flex justify-content-center">
           <button type="submit" class="btn btn-primary">Home</button>
         </div>
@@ -129,7 +129,7 @@ if(isset($_SESSION["XSS2_username"])){
 					<h3>'.$_SESSION["XSS2_username"].'</h3>
     ');
 ?>
-      <form action="/progettoSWM/XSS/XSS2/XSS2_Blog.php" method="get" onsubmit="return superSecureXSSChecker()">
+      <form action="/XSS/XSS2/XSS2_Blog.php" method="get" onsubmit="return superSecureXSSChecker()">
       <textarea name="post" class="form-control" id="post" rows="3"></textarea>
       <button type="submit" class="btn btn-primary" style="margin-top:10px">Submit</button>
       </form>

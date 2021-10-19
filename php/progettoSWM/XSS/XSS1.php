@@ -14,7 +14,7 @@ if(!empty($_GET["username"])){
 
 		echo('
 		<p>ERROR ERROR You can\'t create an account for: '.$_GET['username'].' as you already own one</p>
-		<p>Here it\'s not safe to talk. Return to the <a href="/progettoSWM/XSS/XSS1.php">SAFE AREA</a> </p>
+		<p>Here it\'s not safe to talk. Return to the <a href="/XSS/XSS1.php">SAFE AREA</a> </p>
 		');
 		die();
 	}
@@ -24,23 +24,19 @@ if(!empty($_GET["username"])){
 	$length=15;
 	$password=substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length/strlen($x)) )),1,$length);
 
-	setcookie('username', $username, time() + (86400 * 30), "/progettoSWM/XSS/XSS1.php");
-	setcookie('password', $password, time() + (86400 * 30), "/progettoSWM/XSS/XSS1.php");
+	setcookie('username', $username, time() + (86400 * 30), "/XSS/XSS1.php");
+	setcookie('password', $password, time() + (86400 * 30), "/XSS/XSS1.php");
   
   
 }else if(!empty($_POST["reset"])){
   
 	unset($_COOKIE['username']);
-	setcookie('username', null, -1, '/progettoSWM/XSS/XSS1.php'); 
+	setcookie('username', null, -1, '/XSS/XSS1.php'); 
 	unset($_COOKIE['password']);
-	setcookie('password', null, -1, '/progettoSWM/XSS/XSS1.php'); 
+	setcookie('password', null, -1, '/XSS/XSS1.php'); 
 	$username="";
 	$password="";
-	
 
-}else{
-    
-	//header("location: ../index.php");
 }
 
 ?>
@@ -72,7 +68,7 @@ if(!empty($_GET["username"])){
       <p class="lead">Reset the page if you want to restart or return home</p>
     </div>
     <div class="col-sm-1">
-      <form action="/progettoSWM/XSS/XSS1.php" method="post">
+      <form action="/XSS/XSS1.php" method="post">
         <input type="hidden" name="reset" value=\'1\'>
         <div class="d-flex justify-content-center">
           <button type="submit" class="btn btn-primary">Reset</button>
@@ -80,7 +76,7 @@ if(!empty($_GET["username"])){
       </form>
     </div>
     <div class="col-sm-1">
-      <form action="/progettoSWM/index.php" method="get">
+      <form action="/index.php" method="get">
         <div class="d-flex justify-content-center">
           <button type="submit" class="btn btn-primary">Home</button>
         </div>
@@ -103,7 +99,7 @@ if(!empty($_GET["username"])){
         <p class="lead">Create a malicious link and steal some juicy data</p>
       </div>
       <div class="col-sm-1">
-        <form action="/progettoSWM/index.php" method="get">
+        <form action="/index.php" method="get">
           <div class="d-flex justify-content-center">
             <button type="submit" class="btn btn-primary">Home</button>
           </div>
@@ -119,7 +115,7 @@ if(!empty($_GET["username"])){
 				<div class="col-sm-12 ">
 					<p class="lead">Get your special alpha credential, right here right now</p>
 					
-					<form action="/progettoSWM/XSS/XSS1.php" method="get">
+					<form action="/XSS/XSS1.php" method="get">
 						<div class="form-group">
 							<label for="Usarname">Username:</label>
 							<input type="username" class="form-control" id="username" placeholder="Enter username" name="username">

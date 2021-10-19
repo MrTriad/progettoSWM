@@ -1,6 +1,6 @@
 <?php
 
-    $servername = "localhost";
+    $servername = "db";
     $username = "triad";
     $password = "Database!8";
     $dbname = "trainingSWM";

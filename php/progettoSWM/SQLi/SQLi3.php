@@ -31,7 +31,7 @@ require('../backend/dbConnector.php');
         <p class="lead">The bad guys decided to hide the list to solve the problem</p>
       </div>
       <div class="col-sm-1">
-        <form action="/progettoSWM/index.php" method="get">
+        <form action="/index.php" method="get">
           <div class="d-flex justify-content-center">
             <button type="submit" class="btn btn-primary">Home</button>
           </div>
@@ -49,7 +49,7 @@ require('../backend/dbConnector.php');
                 <p class="lead">1f y0u 423 7h3 h4ck32. We upgraded the database from the old SQLi2_Credential to the new powerful SQLi3_Credential. Now our password are strong and hidden. Good luck</p>
                 <p>-BigBadGuy</p>
                 
-                <form action="/progettoSWM/SQLi/SQLi3.php" method="get">
+                <form action="/SQLi/SQLi3.php" method="get">
 								
                     <div class="form-group">
                         <label for="ID">Item ID:</label>
@@ -77,13 +77,13 @@ require('../backend/dbConnector.php');
 
             if($result->num_rows>=1){
               echo('
-              <div class="alert alert-success" role="alert">
+              <div class="alert alert-success" role="alert" style="margin-top:10px;">
                 <strong>We got you covered!</strong> The item is still available.
               </div>
               ');
             }else{
               echo('
-              <div class="alert alert-danger" role="alert">
+              <div class="alert alert-danger" role="alert" style="margin-top:10px;">
                 <strong>We\'re sorry.</strong> The item is no more available in our store.
               </div>
               ');
